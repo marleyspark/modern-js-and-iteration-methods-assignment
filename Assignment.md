@@ -1,18 +1,25 @@
 [<img src="assets/images/su-logo.png" alt="Skills Union Logo" height="80px" />](https://www.skillsunion.com/)
 
-# Lorem ipsum: Assignment
+# Modern JavaScript & Iteration Methods: Assignment
 
-## Problems
+## Brief
 
-### 1: [Lorem ipsum dolor sit amet](#)
-
-1. Lorem ipsum dolor sit amet
-1. Lorem ipsum dolor sit amet
-1. Lorem ipsum dolor sit amet
+Look into `./src/index..js` for assignment instructions. You are to refactor the existing code and apply what you have learned for this lesson on them.
 
 **Example:**
 
+Before ES6:
+
+```js
+function clone(source) {
+  return JSON.parse(JSON.stringify(source));
+}
 ```
+
+With ES6:
+
+```js
+const clone = (source) => ({ ...source });
 ```
 
 ## Submission Guidelines

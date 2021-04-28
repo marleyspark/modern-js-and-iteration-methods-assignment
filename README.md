@@ -1,6 +1,6 @@
 [<img src="assets/images/su-logo.png" alt="Skills Union Logo" height="80px" />](https://www.skillsunion.com/)
 
-# Lorem ipsum: Assignment
+# Modern JavaScript & Iteration Methods: Assignment
 
 ## Instructions
 
