@@ -1,56 +1,40 @@
-/*
-    In this exercise, use what you have learned to refactor all functions yet retain the objectives.
-*/
-const vehicles = [
-  {
-    type: "car",
-    noOfWheels: 4,
-  },
-  {
-    type: "bike",
-    noOfWheels: 2,
-  },
-  {
-    type: "truck",
-    noOfWheels: 6,
-  },
-];
+// Task 1: Improve the following object assignment code using the enhanced object literal approach.
 
-// Refactor this function
-function addVehicle(type, noOfWheels) {
-  const newVehicle = {
-    type: type,
-    noOfWheels: noOfWheels,
-  };
+// Do not rename the variables here
+const title = "Once I Caught A Fish Alive";
+const noOfChildren = 2;
+const noOfFish = 1;
+const typeOfFish = "gold fish";
 
-  vehicles.push(newVehicle);
-  return newVehicle;
-}
-console.log("add vehicle", addVehicle("motorized tricycle", 3));
+// Refactor code here - retain the properties' name of this object.
+const music = {
+  title: title,
+  noOfChildren: noOfChildren,
+  noOfFish: noOfFish,
+  fishType: typeOfFish,
+};
 
-// Refactor this function
-function filterByWheels(noOfWheels) {
-  let filteredVehicles = [];
-  for (let i = 0; i < vehicles.length; i++) {
-    const v = vehicles[i];
-    if (v.noOfWheels === noOfWheels) {
-      filteredVehicles.push(v);
-    }
-  }
-  return filteredVehicles;
-}
-console.log("filter by 2 wheels", filterByWheels(2));
+// Task 2: Call the following function by passing an array as argument.
 
-// Refactor this function
-function filterByTypes(type1, type2, type3) {
-  return vehicles.filter((v) => {
-    if (v.type === type1 || v.type === type2 || v.type === type3) {
-      return v;
-    }
-  });
-}
+// If called with 1,2,3 = returns 6
+const calculateTotal = (...numbers) => {
+  return numbers.reduce(
+    (accumulator, currentValue) => accumulator + currentValue
+  );
+};
 
-console.log(
-  "filter by truck and motorized tricycle",
-  filterByTypes("truck", "motorized tricycle")
-);
+// Add code here
+
+// Task 3: Selectively destructure and obtain variable "status".
+
+const person = {
+  name: "Johnny",
+  age: 40,
+  height: 170,
+  weight: 65,
+  status: "Good",
+};
+
+const status = null; // Edit code here
+
+console.log(`Your health status is: ${status}`);
