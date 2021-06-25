@@ -78,9 +78,9 @@ const sunday = weeklyForecast[7]
   Refactor the code below to use destructuring to assign values to these 3 variables
 */
 
-const mondayTemperature = monday.temperature
-const mondayCloudCoverage = monday.cloudCoverage
-const mondayWind = monday.wind
+const temperature = monday.temperature
+const cloudCoverage = monday.cloudCoverage
+const wind = monday.wind
 
 
 
