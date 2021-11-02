@@ -8,19 +8,20 @@
 */
 
 const weeklyForecast = [
-  {day: "Monday", temperature: 20, cloudCoverage: "broken", wind: 16},
-  {day: "Thuesday", temperature: 22, cloudCoverage: "few", wind: 10},
-  {day: "Wednesday", temperature: 26, cloudCoverage: "clear", wind: 5},
-  {day: "Thursday", temperature: 24, cloudCoverage: "clear", wind: 5},
-  {day: "Friday", temperature: 24, cloudCoverage: "few", wind: 18},
-  {day: "Saturday", temperature: 19, cloudCoverage: "broken", wind: 25},
-  {day: "Sunday", temperature: 17, cloudCoverage: "overcast", wind: 30}
+  { day: "Monday", temperature: 20, cloudCoverage: "broken", wind: 16 },
+  { day: "Thuesday", temperature: 22, cloudCoverage: "few", wind: 10 },
+  { day: "Wednesday", temperature: 26, cloudCoverage: "clear", wind: 5 },
+  { day: "Thursday", temperature: 24, cloudCoverage: "clear", wind: 5 },
+  { day: "Friday", temperature: 24, cloudCoverage: "few", wind: 18 },
+  { day: "Saturday", temperature: 19, cloudCoverage: "broken", wind: 25 },
+  { day: "Sunday", temperature: 17, cloudCoverage: "overcast", wind: 30 }
 ]
 
 /* Map 
 
 In weeklyForecast array, the temperature properties are in Celcius
-Please write an arrow function which takes weeklyForecast as an argument and returns a new array. The new array should include day objects like in
+Please write an arrow function which takes weeklyForecast as an argument and returns a new array.
+The new array should include day objects like in
 weeklyForecast array but the temperature value should be converted to Faherenheit.
 
 the value of the first item in the new array should be 
@@ -42,10 +43,11 @@ Divide by 5, then multiply by 9, then add 32
 /* Filter
 
   We would like to know which days of the week are sunny. 
-  Please write an arrow function which accepts weeklyForecast as an argument and returns an array of day obejcts. It should only contain days
+  Please write an arrow function which accepts weeklyForecast as an argument 
+  and returns an array of day objects. It should only contain days
   where cloud coverage is "clear" or "few". 
 
-  when successful the return value should looks like this:
+  when successful the return value should look like this:
 
   [
     {day: "Thuesday", temperature: 22, cloudCoverage: "few", wind: 10},
@@ -78,18 +80,16 @@ const sunday = weeklyForecast[7]
   Refactor the code below to use destructuring to assign values to these 3 variables
 */
 
-const temperature = monday.temperature
-const cloudCoverage = monday.cloudCoverage
-const wind = monday.wind
-
-
+const mondayTemperature = monday.temperature
+const mondayCloudCoverage = monday.cloudCoverage
+const mondayWind = monday.wind
 
 
 
 /*Spread operator*/
 
 /* 
-We have received new weather data that Sunday cloudCoverage will be 
+We have received information that Sunday cloudCoverage will be 
 "broken" instead of "overcast".  
 Use the spread operator to reassign the sunday variable to an object containing all of the properties 
 and values currently on sunday but with a cloudCoverage property set to "broken"
@@ -103,25 +103,27 @@ The new sunday object should look like this:
 /* 
   We need to generate a biweekly forecast from 2 weekly forecasts. 
   Please use spread operator to create biweeklyForecast array which includes the data 
-  of weekOneForecast and weekTwoForecast
+  of weekOneForecast and weekTwoForecast and save the result in a variable biweeklyForecast
 */
 
 const weekOneForecast = [
-  {day: "Monday", temperature: 20, cloudCoverage: "broken", wind: 16},
-  {day: "Thuesday", temperature: 22, cloudCoverage: "few", wind: 10},
-  {day: "Wednesday", temperature: 26, cloudCoverage: "clear", wind: 5},
-  {day: "Thursday", temperature: 24, cloudCoverage: "clear", wind: 5},
-  {day: "Friday", temperature: 24, cloudCoverage: "few", wind: 18},
-  {day: "Saturday", temperature: 19, cloudCoverage: "broken", wind: 25},
-  {day: "Sunday", temperature: 17, cloudCoverage: "overcast", wind: 30}
+  { day: "Monday", temperature: 20, cloudCoverage: "broken", wind: 16 },
+  { day: "Thuesday", temperature: 22, cloudCoverage: "few", wind: 10 },
+  { day: "Wednesday", temperature: 26, cloudCoverage: "clear", wind: 5 },
+  { day: "Thursday", temperature: 24, cloudCoverage: "clear", wind: 5 },
+  { day: "Friday", temperature: 24, cloudCoverage: "few", wind: 18 },
+  { day: "Saturday", temperature: 19, cloudCoverage: "broken", wind: 25 },
+  { day: "Sunday", temperature: 17, cloudCoverage: "overcast", wind: 30 }
 ]
 
 const weekTwoForecast = [
-  {day: "Monday", temperature: 20, cloudCoverage: "broken", wind: 16},
-  {day: "Thuesday", temperature: 22, cloudCoverage: "few", wind: 10},
-  {day: "Wednesday", temperature: 26, cloudCoverage: "clear", wind: 5},
-  {day: "Thursday", temperature: 24, cloudCoverage: "clear", wind: 5},
-  {day: "Friday", temperature: 24, cloudCoverage: "few", wind: 18},
-  {day: "Saturday", temperature: 19, cloudCoverage: "broken", wind: 25},
-  {day: "Sunday", temperature: 17, cloudCoverage: "overcast", wind: 30}
+  { day: "Monday", temperature: 20, cloudCoverage: "broken", wind: 16 },
+  { day: "Thuesday", temperature: 22, cloudCoverage: "few", wind: 10 },
+  { day: "Wednesday", temperature: 26, cloudCoverage: "clear", wind: 5 },
+  { day: "Thursday", temperature: 24, cloudCoverage: "clear", wind: 5 },
+  { day: "Friday", temperature: 24, cloudCoverage: "few", wind: 18 },
+  { day: "Saturday", temperature: 19, cloudCoverage: "broken", wind: 25 },
+  { day: "Sunday", temperature: 17, cloudCoverage: "overcast", wind: 30 }
 ]
+
+const biweeklyForecast = []
