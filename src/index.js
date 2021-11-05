@@ -34,7 +34,14 @@ Divide by 5, then multiply by 9, then add 32
 */
 
 
+const convertedForecast = (item) => {
+  return item.map((details) => {
+    details.temperature = (details.temperature * 9) / 5 + 32;
+    return details;
 
+  });
+};
+console.log(convertedForecast(weeklyForecast));
 
 
 
@@ -58,7 +65,10 @@ Divide by 5, then multiply by 9, then add 32
 
 */
 
-
+const days = (weeklyForecast) => {
+  return weeklyForecast.filter((sunny) => sunny.cloudCoverage === "clear" || sunny.cloudCoverage === "few");
+}
+console.log(days(weeklyForecast))
 
 
 
@@ -67,25 +77,27 @@ Divide by 5, then multiply by 9, then add 32
   Refactor the code below to use destructuring to assign values to these 7 variables
 */
 
-const monday = weeklyForecast[1]
+/* const monday = weeklyForecast[1]
 const tuesday = weeklyForecast[2]
 const wednesday = weeklyForecast[3]
 const thursday = weeklyForecast[4]
 const friday = weeklyForecast[5]
 const saturday = weeklyForecast[6]
 const sunday = weeklyForecast[7]
-
+ */
+const [monday, tuesday, wednesday, thursday, friday, saturday, sunday]
+  = weeklyForecast;
 /*
   Destructuring objects - 
   Refactor the code below to use destructuring to assign values to these 3 variables
 */
 
-const mondayTemperature = monday.temperature
-const mondayCloudCoverage = monday.cloudCoverage
-const mondayWind = monday.wind
+//const mondayTemperature = monday.temperature
+//const mondayCloudCoverage = monday.cloudCoverage
+//const mondayWind = monday.wind
 
-
-
+const [mondayTemperature, mondayCloudCoverage, mondayWind] = [monday.temperature, monday.cloudCoverage, monday.wind];
+console.log(mondayTemperature, mondayCloudCoverage, mondayWind)
 /*Spread operator*/
 
 /* 
@@ -98,7 +110,8 @@ The new sunday object should look like this:
 {day: "Sunday", temperature: 17, cloudCoverage: "broken", wind: 30}
 */
 
-
+sundayDay = { ...sunday, cloudCoverage: "broken" };
+console.log(sundayDay);
 
 /* 
   We need to generate a biweekly forecast from 2 weekly forecasts. 
@@ -126,4 +139,5 @@ const weekTwoForecast = [
   { day: "Sunday", temperature: 17, cloudCoverage: "overcast", wind: 30 }
 ]
 
-const biweeklyForecast = []
+const biweeklyForecast = [...weekOneForecast, ...weekTwoForecast];
+console.log(biweeklyForecast);
